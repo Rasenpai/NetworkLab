@@ -121,4 +121,4 @@ Karena memakai SQLite di file lokal, aplikasi butuh disk yang persisten (VPS ata
 
 1. Isi semua environment variable di server, terutama `APP_URL` dan `CAPTCHA_SECRET`.
 2. `npm run build` lalu `npm run start` (di belakang reverse proxy seperti Nginx atau Caddy dengan HTTPS).
-3. Daftarkan `https://network.rasena.web.id/sitemap.xml` di Google Search Console.
+3. Daftarkan `https://domainmu/sitemap.xml` di Google Search Console.
