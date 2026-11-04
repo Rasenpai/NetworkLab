@@ -5,6 +5,9 @@ export const alt =
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
+const WHITE_WORDS = ["Belajar", "MikroTik", "dan", "Cisco", "dengan"];
+const ACCENT_WORDS = ["praktik", "langsung."];
+
 export default function OpengraphImage() {
   return new ImageResponse(
     <div
@@ -29,22 +32,40 @@ export default function OpengraphImage() {
             background: "#9b59b6",
           }}
         />
-        <div style={{ fontSize: 36, fontWeight: 700 }}>NetworkLab</div>
+        <div style={{ display: "flex", fontSize: 36, fontWeight: 700 }}>
+          NetworkLab
+        </div>
       </div>
 
       <div style={{ display: "flex", flexDirection: "column" }}>
         <div
           style={{
+            display: "flex",
+            flexWrap: "wrap",
+            columnGap: 20,
             fontSize: 76,
             fontWeight: 700,
             lineHeight: 1.08,
             letterSpacing: -2,
           }}
         >
-          Belajar MikroTik dan Cisco dengan{" "}
-          <span style={{ color: "#9b59b6" }}>praktik langsung.</span>
+          {WHITE_WORDS.map((w) => (
+            <span key={w}>{w}</span>
+          ))}
+          {ACCENT_WORDS.map((w) => (
+            <span key={w} style={{ color: "#9b59b6" }}>
+              {w}
+            </span>
+          ))}
         </div>
-        <div style={{ marginTop: 28, fontSize: 32, color: "#9a8fa8" }}>
+        <div
+          style={{
+            display: "flex",
+            marginTop: 28,
+            fontSize: 32,
+            color: "#9a8fa8",
+          }}
+        >
           Materi terstruktur, lab praktik, dan quiz dalam satu tempat.
         </div>
       </div>
