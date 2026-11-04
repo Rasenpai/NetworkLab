@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 
-const SITE_URL = process.env.APP_URL ?? "http://localhost:3000";
+const SITE_URL = (
+  process.env.APP_URL || "https://network.rasena.web.id"
+).replace(/\/$/, "");
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -8,8 +10,15 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        // Halaman privat milik user. Tambahkan route lain di (app) yang tidak perlu muncul di Google.
-        disallow: ["/api/", "/dashboard", "/profile", "/verify-email"],
+        // Halaman privat milik user.
+        disallow: [
+          "/api/",
+          "/dashboard",
+          "/profile",
+          "/users",
+          "/portfolio",
+          "/verify-email",
+        ],
       },
     ],
     sitemap: `${SITE_URL}/sitemap.xml`,

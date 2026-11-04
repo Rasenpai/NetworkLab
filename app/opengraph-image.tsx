@@ -39,11 +39,9 @@ export default function OpengraphImage() {
             fontWeight: 700,
             lineHeight: 1.08,
             letterSpacing: -2,
-            display: "flex",
-            flexWrap: "wrap",
           }}
         >
-          <span>Belajar MikroTik dan Cisco dengan&nbsp;</span>
+          Belajar MikroTik dan Cisco dengan{" "}
           <span style={{ color: "#9b59b6" }}>praktik langsung.</span>
         </div>
         <div style={{ marginTop: 28, fontSize: 32, color: "#9a8fa8" }}>
@@ -61,7 +59,6 @@ export default function OpengraphImage() {
           background: "#18121f",
           fontSize: 28,
           color: "#9a8fa8",
-          fontFamily: "monospace",
         }}
       >
         <span>[admin@r1] &gt;&nbsp;</span>
